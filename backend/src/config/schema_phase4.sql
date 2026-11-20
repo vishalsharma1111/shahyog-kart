@@ -1,0 +1,17 @@
+-- =====================================================================
+-- SHAHYOG KART - PHASE 4 DATABASE SCHEMA
+-- Notifications System and Admin Management Extensions
+-- =====================================================================
+
+CREATE TABLE IF NOT EXISTS notifications (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  message TEXT NOT NULL,
+  type ENUM('donation', 'delivery', 'reward', 'order', 'system') DEFAULT 'system',
+  reference_id INT NULL,
+  reference_type VARCHAR(50) NULL,
+  is_read BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);

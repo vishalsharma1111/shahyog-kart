@@ -1,0 +1,19 @@
+# Node.js dependencies
+node_modules/
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*.log
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large temporary binaries
+cloudflared.exe
