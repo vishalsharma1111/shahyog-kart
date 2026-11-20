@@ -37,7 +37,7 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [successNotice, setSuccessNotice] = useState('');
-  const [showLegacyForm, setShowLegacyForm] = useState(false);
+  const [showLegacyForm, setShowLegacyForm] = useState(true);
 
   const isPartner = ['seller', 'ngo', 'delivery'].includes(role);
 
