@@ -54,8 +54,8 @@ app.use(morgan('dev'));
 // Static uploads serving
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
-// Health check endpoint
-app.get('/api/health', (req, res) => {
+// Health check endpoints (for Render & monitoring)
+app.get(['/health', '/api/health'], (req, res) => {
   res.json({
     status: 'healthy',
     platform: 'Shahyog Kart API',
